@@ -7,9 +7,11 @@
 <table id="tbl" border="1" cellpadding="3" cellspacing='0' style='border-collapse: collapse;'>
   <tr><td><input type='password' placeholder='password' id='pw'></td><td><button id="submit">Login</button></td></tr>
 </table>
+<a id='gi' style='display: none;' href='https://github.com/tdo-jsz/tdo-jsz.github.io/commits/master/teamerliste.txt'>Änderungshistorie</a>
 <script>
 $("#submit").click(function(){
   if ($("#pw").val() == "tdo"){
+    $("#gi").show();
   $.ajax("teamerliste.txt").done(function(d){
   var x = d.split("\n");
   var t = "";
