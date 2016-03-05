@@ -27,6 +27,9 @@ $("#submit").click(function(){
   }
   $("#tbl").html(t);
 });
+$.ajax("https://github.com/tdo-jsz/tdo-jsz.github.io/commits/master.atom").done(function(d){
+  console.log(d);
+});
 }
 });
 </script>
