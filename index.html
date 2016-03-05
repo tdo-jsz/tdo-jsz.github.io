@@ -5,9 +5,11 @@
 <body>
 <h3>TDO-Teamer</h3>
 <table id="tbl" border="1" cellpadding="3">
-  
+  <tr><td><input type='password' placeholder='password' id='pw'></td><td><a id="submit">Login</a></td></tr>
 </table>
 <script>
+$("#submit").click(function(){
+  if ($("#pw").val() == "tdo"){
   $.ajax("teamerliste.txt").done(function(d){
   var x = d.split("\n");
   var t = "";
@@ -21,6 +23,8 @@
     t += "</tr>";
   }
   $("#tbl").html(t);
+});
+}
 });
 </script>
 </body>
